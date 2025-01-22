@@ -10,6 +10,13 @@
       src="https://kit.fontawesome.com/e186fe6458.js"
       crossorigin="anonymous"
     ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="page-container">
@@ -33,41 +40,61 @@
         </div>
       </div>
 
-      <div class="slider">
-        <div class="slides">
-          <input type="radio" name="radio-btn" id="radio1" checked />
-          <input type="radio" name="radio-btn" id="radio2" />
-          <input type="radio" name="radio-btn" id="radio3" />
-          <input type="radio" name="radio-btn" id="radio4" />
-
-          <div class="slide first">
-            <a href=""><img src="images/necrons.jpg" alt="" /></a>
-            <span>
-              <h3>Necrons</h3>
-              <p>Alien Robot Skeletons!</p>
-            </span>
-          </div>
-          <div class="slide">
-            <a href=""><img src="images/space marines.jpg" alt="" /></a>
-            <span>
-              <h3>Space Marines</h3>
-              <p>Super human soliders!</p>
-            </span>
-          </div>
-          <div class="slide">
-            <a href=""><img src="images/necrons.jpg" alt="" /></a>
-          </div>
-          <div class="slide">
-            <a href=""><img src="images/space marines.jpg" alt="" /></a>
-          </div>
-
-          <div class="slider-nav">
-            <label for="radio1" class="nav-btn nav-btn1"></label>
-            <label for="radio2" class="nav-btn nav-btn2"></label>
-            <label for="radio3" class="nav-btn nav-btn3"></label>
-            <label for="radio4" class="nav-btn nav-btn4"></label>
-          </div>
+      <div class="shadow-container">
+        <div class="intro-container">
+          <h2>Welcome to</h2>
+          <img src="images/w40k logo.webp" alt="" />
+          <p>
+            Warhammer 40k is a franchise created by Games Workshop, telling a
+            story of the far futrue, and the grim darkness of it. The universe
+            of 40k expands over video games, board games, books, etc.
+          </p>
         </div>
+
+        <section class="slider">
+          <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1" checked />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <input type="radio" name="radio-btn" id="radio4" />
+
+            <div class="slide first">
+              <a href=""><img src="images/necrons.jpg" alt="" /></a>
+              <span>
+                <h3>Necrons</h3>
+                <p>Alien Robot Skeletons!</p>
+              </span>
+            </div>
+            <div class="slide">
+              <a href=""><img src="images/space marines.jpg" alt="" /></a>
+              <span>
+                <h3>Space Marines</h3>
+                <p>Super human soliders!</p>
+              </span>
+            </div>
+            <div class="slide">
+              <a href=""><img src="images/necrons.jpg" alt="" /></a>
+              <span>
+                <h3>Necrons</h3>
+                <p>Alien Robot Skeletons!</p>
+              </span>
+            </div>
+            <div class="slide">
+              <a href=""><img src="images/space marines.jpg" alt="" /></a>
+              <span>
+                <h3>Space Marines</h3>
+                <p>Super human soliders!</p>
+              </span>
+            </div>
+
+            <div class="slider-nav">
+              <label for="radio1" class="nav-btn nav-btn1"></label>
+              <label for="radio2" class="nav-btn nav-btn2"></label>
+              <label for="radio3" class="nav-btn nav-btn3"></label>
+              <label for="radio4" class="nav-btn nav-btn4"></label>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
 

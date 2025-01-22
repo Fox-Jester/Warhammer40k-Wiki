@@ -4,19 +4,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: "Tinos", serif;;
     
 }
 
 
 html {
     font-size: 62.5%;
+    
 }
 
 body {
     background-image: url(./images/emperor.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 
@@ -37,6 +39,7 @@ body {
     margin-top: 5rem;
     
     align-items: center;
+    margin-bottom: 3rem;
     
 }
 
@@ -157,18 +160,110 @@ body {
 }
 
 
+
+.shadow-container {
+    background: rgba(41, 39, 39, 0.6);
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 6rem;
+}
+ 
+/* INTRO BOX */
+.intro-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 50vw;  
+}
+
+
+.intro-container img{
+    width: 45rem;
+    margin-top: 3rem;
+    
+}
+
+.intro-container h2 {
+    font-size: 2.6rem;
+    color: white;
+    text-shadow: 0 0 3px black;
+    position: absolute;
+    top: 1.5rem;
+   
+}
+
+.intro-container p {
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+    text-wrap: wrap;
+    
+    bottom: 0;
+    padding: 0 1.5rem 2rem 1.5rem;
+    
+}
+
+@media screen and (max-width: 1120px) {
+    .intro-container{
+        width: 60vw;  
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-container{
+        width: 75vw;  
+    }
+    .intro-container img{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .intro-container{
+        width: 85vw;  
+    }
+
+    .intro-container img{
+        width: 35rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .intro-container{
+        width: 95vw;  
+    }
+
+    .intro-container img{
+        width: 30rem;
+    }
+
+    .intro-container h2 {
+        font-size: 2.2rem;
+
+    }
+    
+    .intro-container p {
+        font-size: 1.6rem;
+
+    }
+}
+
 /* SLIDE SHOW */
 
 .slider {
-    width: 80rem;
+    width: 50vw;
     height: 50rem;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
 } 
 
 .slides {
     width: 500%;
-    height: 50rem;
+   
     display: flex;
 }
 
@@ -188,25 +283,27 @@ body {
     z-index: 1;
     position: absolute;
     bottom: 1rem;
-    left: 0;
+    left: 1.5rem;
     font-size: 1.6rem;
     padding: 0.5rem;
-    padding-left: 1.5rem;
+    
     text-align: center;
 }
 
 .slide img{
-    width: 80rem;
+    width: 100%;
     height: 50rem;
 }
 
-/* MANUAL BTNS */
+
+
+/* SLIDER BTNS */
 
 
 .slider-nav{
     position: absolute;
     
-    width: 80rem;
+    width: 100%;
     height: 6rem;
     bottom: 0;
     display: flex;
@@ -264,4 +361,115 @@ body {
 
 #radio4:checked ~ .slider-nav .nav-btn4 {
     background: white;
+}
+
+/* MEDIA SLIDER */
+
+
+@media screen and (max-width: 1120px){
+    .slide span {
+
+        bottom: 1rem;
+        left: 1.5rem;
+        font-size: 1.4rem;
+        padding: 0.5rem;
+
+    }
+
+    .slide img{
+        height: 45rem;
+    }
+    
+    .slider {
+        width: 60vw;
+        height: 45rem;
+
+    } 
+
+    .nav-btn:not(:last-child){
+        margin-right: 2rem;
+    }
+  
+    .nav-btn{
+        padding: 0.5rem;
+        height: 0.8rem;
+        width: 0.8rem;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .slide span {
+
+        bottom: 1.5rem;
+        left: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .slider {
+        width: 75vw;
+
+    } 
+
+    .nav-btn:not(:last-child){
+        margin-right: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 530px){
+    .slide span {
+
+        left: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .slide img{
+        height: 40rem;
+    }
+    
+    .slider {
+        width: 85vw;
+        height: 40rem;
+
+    } 
+
+    .nav-btn:not(:last-child){
+        margin-right: 1rem;
+    }
+
+    .nav-btn{
+        height: 0.5rem;
+        width: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 380px){
+    .slide span {
+
+        bottom: 1.2rem;
+        left: 0rem;
+    }
+
+    .slide img{
+        height: 35rem;
+    }
+    
+    .slider {
+        width: 95vw;
+        height: 35rem;
+
+    } 
+
+    .slider-nav{
+        height: 5rem;
+    }
+    
+    .nav-btn{
+        padding: 0.4rem;
+        height: 0.3rem;
+        width: 0.3rem;
+    }
+    
 }
