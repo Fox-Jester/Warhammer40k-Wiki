@@ -1,6 +1,9 @@
-factions - page
+factions - subfactions page
 
-subfactions & chapters/specific entries - page
+ chapters/specific entries - page
 
 
 make home page say home page.
+
+
+make an adaptable content box for multi use
