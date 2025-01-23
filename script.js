@@ -10,7 +10,10 @@ const App = {
         radBtn3: document.getElementById("radio3"),
         radBtn4: document.getElementById("radio4"),
 
-        time: 0
+        navBar: document.querySelector('#hidden-nav'),
+        pageContainer: document.querySelector(".page-container"),
+
+        time: 0,
 
     },
     
@@ -31,8 +34,19 @@ const App = {
     },
     
     applyListeners(){
+
+        this.$.pageContainer.addEventListener("scroll", (e) => {
+            if(this.$.pageContainer.scrollTop > 199){
+                this.$.navBar.classList.remove("hidden")
+            }
+            else {
+                this.$.navBar.classList.add("hidden")
+            }
+        })
+        
+        
         const btns = [App.$.radBtn1, App.$.radBtn2, App.$.radBtn3, App.$.radBtn4]
-       
+        
         btns.forEach((btn) => 
             btn.addEventListener("click", (e) => {
                 App.resetTimer();
@@ -41,23 +55,24 @@ const App = {
     },
     
     slidechange() {
-  
-    if(App.$.radBtn1.checked === true){
-        App.$.radBtn2.checked = true;
-    }
-    else if(App.$.radBtn2.checked === true){
-        App.$.radBtn3.checked = true;
-    }
-    else if(App.$.radBtn3.checked === true){
-        App.$.radBtn4.checked = true;
-    }
-    else {
-        App.$.radBtn1.checked = true;
+        
+        if(App.$.radBtn1.checked === true){
+            App.$.radBtn2.checked = true;
+        }
+        else if(App.$.radBtn2.checked === true){
+            App.$.radBtn3.checked = true;
+        }
+        else if(App.$.radBtn3.checked === true){
+            App.$.radBtn4.checked = true;
+        }
+        else {
+            App.$.radBtn1.checked = true;
+        }
+        
     }
     
-    }
-
 }
+
 
 
 
