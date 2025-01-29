@@ -10,8 +10,14 @@ const App = {
         radBtn3: document.getElementById("radio3"),
         radBtn4: document.getElementById("radio4"),
 
-        navBar: document.querySelector('#hidden-nav'),
+        menuWrap: document.querySelector('#menu-wrap'),
         pageContainer: document.querySelector(".page-container"),
+
+        mobileBtn: document.querySelector(".mobile-btn-box"),
+        linkContainer: document.querySelector(".link-container"),
+
+        dropdowns: document.querySelectorAll(".dropdown"),
+
 
         time: 0,
 
@@ -22,6 +28,7 @@ const App = {
     init(){
         this.timer()
         this.applyListeners()
+        this.sizeCheck()
     },
     
     timer(){
@@ -32,15 +39,50 @@ const App = {
         clearInterval(this.$.time)
         App.$.time = setInterval(this.slidechange, 8000);
     },
+
+    sizeCheck(){
+        if(window.innerWidth < 481){
+            App.$.menuWrap.classList.add("sticky")
+        }
+    },
     
     applyListeners(){
 
+        window.addEventListener("resize", (e) => {
+            if(window.innerWidth < 481) {
+                App.$.menuWrap.classList.add("sticky")
+            }
+            else{
+                App.$.menuWrap.classList.remove("sticky")
+            }
+        })
+      
+        App.$.mobileBtn.addEventListener("click", (e) => {
+            App.$.mobileBtn.lastElementChild.classList.toggle("rotate");
+            App.$.linkContainer.classList.toggle("reveal-flex")
+            
+        })
+
+       
+
+        App.$.dropdowns.forEach((dropdown) => {
+            dropdown.addEventListener("click", (e) => {
+                dropdown.children[1].classList.toggle("rotate")
+
+
+                dropdown.lastElementChild.classList.toggle("reveal-flex");
+            
+            })
+        })
+        
+        
+
         this.$.pageContainer.addEventListener("scroll", (e) => {
             if(this.$.pageContainer.scrollTop > 199){
-                this.$.navBar.classList.remove("hidden")
+                this.$.menuWrap.classList.add("sticky")
             }
-            else {
-                this.$.navBar.classList.add("hidden")
+            else if (window.innerWidth >= 481) {
+                this.$.menuWrap.classList.remove("sticky")
             }
         })
         

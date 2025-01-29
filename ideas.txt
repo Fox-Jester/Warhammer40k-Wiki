@@ -3,7 +3,21 @@ factions - subfactions page
  chapters/specific entries - page
 
 
-make home page say home page.
-
 
 make an adaptable content box for multi use
+
+ADD QUOTES
+
+create seperator
+
+ADD MULTI DROPDOWN for mobile
+
+screen size:
+
+480 switch to toggle drop down
+
+
+wrap mobile-btn-box & dropdown in a dive to flex column
+
+make 0 space between mobile link container and menu bar
+creat triangle point on it

@@ -30,6 +30,8 @@ html {
     
 }
 
+
+
 .home-img {
     background-image: url(images/emperor.jpg);
     background-size: cover;
@@ -45,24 +47,30 @@ html {
 
 /* MENU BAR */
 
-.menu-bar{
-    display: flex;
+#menu-wrap{
     margin-top: 5rem;
-    align-items: center;
-    margin-bottom: 3rem;
-    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    
+    z-index: 3;
 }
 
-.sticky {
-    z-index: 1;
+.sticky{
+    background: rgba(32, 155, 155, 0.7);
     position: sticky;
-    top: 0rem;
-    background: royalblue;
-    justify-content: center;
-    width: 100%;
-    margin-top: 0;
-    
+    top: 0;
+
 }
+
+.menu-bar{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: auto;
+    width: 60%;
+}
+
+
 
 .hidden {
     display: none;
@@ -74,66 +82,55 @@ html {
 }
 
 .menu-bar img{
-    width: 30rem;
+    width: 25rem;
 
 }
 
-.menu-bar.sticky img{
-    width: 10rem;
-}
 
-.sticky .logo-tag{
-    font-size: 1rem;
-    left: 2.5rem;
-    bottom: -2px;
-}
+
 
 .logo-tag {
+    font-size: 1.8rem;
     position: absolute;
     color: rgb(233, 233, 233);
     text-shadow: 0 0 5px black;
-    bottom: -0.5rem;
-    left: 10rem;
+    bottom: -4PX;
+    left: 82px;
     
 }
 
 
 .link-container{
     display: flex;
-    justify-content: space-around;
-
-    width: 40rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 53rem;
+    
 }
 
-.menu-bar.sticky a {
-    font-size: 1.6rem;
-    text-shadow: 0 0 8px black;
-}
 
-.menu-bar a {
-    color: white;
-    text-shadow: 0 0 5px black;
+.link {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 6px black;
     
     font-size: 2.2rem;
     text-decoration: none;
     font-weight: 500;
+ 
 }
 
-.menu-bar a:hover {
+.link:hover {
     color: deepskyblue;
     text-decoration: underline;
 
 }
 
-.menu-bar.sticky .chevron{
-    font-size: 1rem;
-}
 
-.menu-bar .chevron {
+.link ~ .chevron, .mobile-btn-box .chevron {
     color: white;
     text-shadow: 0 0 5px black;
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
+    margin-left: 0.4rem;
+    font-size: 1.2rem;
     transition: 0.3s;
 }
 
@@ -146,117 +143,386 @@ html {
     padding-bottom: 0.8rem;
 }
 
+
+
 .dropdown-content {
     background-color: rgba(41, 39, 39, 0.6);
     display: none;
     flex-direction: column;
-    ;
+    padding: 0.5rem;
     z-index: 1;
     position: absolute;
-    
-    
+     
 }
 
-.sticky .dropdown-content a {
-    padding: 0.5rem 0.8rem;
-    font-size: 1.2rem;
-}
 
 .dropdown-content a {
     padding: 1rem 1.2rem;
     font-size: 1.6rem;
+    text-wrap: nowrap;
     display: block;
     
 }
-
 .dropdown-content a:hover {
     background-color: rgba(108, 101, 101, 0.6);
     color: white;
     text-shadow: 0 0 0;
 }
 
-.dropdown:hover .dropdown-content{
+#menu-wrap:not(.sticky) .dropdown:hover .dropdown-content {
     display: flex;
 }
 
-.dropdown:hover .chevron{
+#menu-wrap:not(.sticky) .dropdown:hover .chevron{
     transform: rotate(90deg);
 }
 
-@media screen and (max-width: 700px) {
+.rotate {
+    transform: rotate(90deg);
+}
+
+.mobile-btn-box {
+    display: none;
+    position: relative;
+    padding-right: 1rem;
+}
+.mobile-btn {
+    font-size: 3rem;
+    color: rgb(228, 223, 223);
+    margin-right: 5px;  
+}
+
+ .mobile-btn-box .chevron{
+    position: absolute;
+    bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.sticky .menu-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 0;
+    z-index: 3;
+   
+}
+
+.sticky .menu-bar img{
+    width: 20rem;
+}
+
+.sticky .logo-tag{
+    font-size: 1.4rem;
+    left: 65px;
+    bottom: -2px;
+}
+
+.sticky .link-container{ 
+    width: 60%;
+    
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    background: rgb(42, 40, 40);
+    position: absolute;
+    padding: 1rem;
+    top: 6.4rem;
+    z-index: 3;
+    margin-top: 0.5rem;
+
+    
+}
 
 
-    .menu-bar img{
-        width: 10rem;
+.sticky .link-container::after {
+    
+    position: absolute;
+    right: 0%;
+    margin-right: 12px;
+    top: -15px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 0px;
+    
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid rgb(42, 40, 40);
+    
+}
+.sticky .dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: static;
+    background: rgb(62, 59, 59);
+    margin-top: 8px;
+    
+} 
+
+.sticky .dropdown-content > .link{
+    text-decoration: underline;
+    padding: 1rem 0;
+    font-size: 1.8rem;
+} 
+.sticky .dropdown ~ .link{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0;
+}
+.sticky .dropdown{
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    
+}
+
+.sticky .mobile-btn-box{
+    display: block;
+    
+    
+}
+
+.sticky .link {
+    margin: 0;
+    font-size: 2rem;
+   
+}
+
+.sticky .logo-container {
+    margin-bottom: 1.5rem;
+}
+.sticky .reveal-flex{
+    display: flex;
+}
+
+
+
+@media screen and (max-width: 1500px){
+    #menu-wrap {
+        margin-bottom: 0;
+    }
+
+    .menu-bar{
+        margin-bottom: 1.5rem;
     }
     
-     .logo-tag{
-        font-size: 1rem;
-        left: 2.5rem;
+    .menu-bar img{
+        width: 20rem;
+    }
+    
+    .logo-tag{
+        font-size: 1.4rem;
+        left: 65px;
         bottom: -2px;
     }
-
-
-
+    
+    .link {
+        font-size: 2rem;
+    }
     .link-container{
-        width: 30rem;
+        width: 45rem;
     }
     
-    .menu-bar a {
-        font-size: 1.8rem;
-    }
-    
-    .menu-bar .chevron {
+    .link-container .chevron {
         font-size: 1.2rem;
     }
     
     .dropdown-content a {
-        padding: 0.8rem 1rem;
-        font-size: 1.2rem;
-        display: block;
+        font-size: 1.8rem;
     }
-
+    
     
 }
 
-@media screen and (max-width: 430px) {
 
-
-    .menu-bar.sticky img{
-        width: 8rem;
+@media screen and (max-width: 1200px){
+    
+    
+    
+    .menu-bar img{
+        width: 15rem;
     }
-
-    .sticky .logo-tag{
-        font-size: 0.8rem;
-        left: 2rem;
+    
+    .logo-tag{
+        font-size: 1.2rem;
+        left: 47px;
         bottom: -2px;
     }
-
-    .menu-bar.sticky a {
-            font-size: 1.2rem;
+    
+    .link {
+        font-size: 1.6rem;
     }
-
-    .sticky .dropdown-content a {
-        padding: 0.5rem 0.8rem;
+    .link-container{
+        width: 40rem;
+    }
+    
+    .link-container .chevron {
         font-size: 1rem;
-        display: block;
+    }
+    
+    .dropdown-content a {
+        
+        font-size: 1.4rem;
     }
 
-    .menu-bar.sticky {
-        flex-direction: row;
+    .mobile-btn-box {
+
+        padding-right: 1rem;
     }
-    .sticky .logo-container{
-        margin-bottom: 0;
+    .mobile-btn {
+        font-size: 2.5rem;
+        margin-right: 5px;  
+    }
+    
+     .mobile-btn-box .chevron{
+        position: absolute;
+        bottom: 5px;
+        font-size: 1.6rem;
     }
 
+    
 
+    .sticky .dropdown-content {
+        margin-top: 6px;  
+    } 
+    
+    .sticky .dropdown-content > .link{
+        padding: 0.8rem 0;
+        font-size: 1.6rem;
+    } 
+
+  
+
+    
+    .sticky .link {
+        font-size: 1.8rem;
+    }
+    
+    
+}
+
+@media screen and (max-width: 860px) {
+    
+    
+    .menu-bar img{
+        width: 10rem;
+    }
+    
+    .logo-tag{
+        font-size: 1rem;
+        left: 2.5rem;
+        bottom: -2px;
+    }
+    
+    
+    
+    .link-container{
+        width: 40rem;
+    }
+    
     .menu-bar {
         flex-direction: column;
         margin-top: 3rem;
         
     }
-    .logo-container {
-        margin-bottom: 1.5rem;
+    
+    .mobile-btn-box {
+        padding-right: 1rem;
+    }
+    .mobile-btn {
+        font-size: 2.4rem;
+        margin-right: 5px;  
+    }
+    
+     .mobile-btn-box .chevron{
+        position: absolute;
+        bottom: 5px;
+        font-size: 1.4rem;
+    }
+
+    .sticky .logo-container {
+        margin-bottom: 1rem;
+    }
+    
+    .sticky .menu-bar img {
+        width: 15rem;
+    }
+    .sticky .logo-tag{
+        font-size: 1.2rem;
+        left: 47px;
+        bottom: -2px;
+    }
+    .sticky .menu-bar {
+        width: 85%;
+    }
+    
+    .sticky .link-container{ 
+        width: 85%;
+        margin-top: 0rem;
+        top: 5.2rem;
+    }
+
+    .sticky .link-container::after {
+        position: absolute;
+        right: 0%;
+        margin-right: 12px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        content: '';
+        border-top: 0px;
+        
+        border-left: 13px solid transparent;
+        border-right: 13px solid transparent;
+        border-bottom: 13px solid rgb(42, 40, 40);
+        
+    }
+
+    .sticky .dropdown-content {
+        margin-top: 6px;  
+    } 
+    
+    .sticky .dropdown-content > .link{
+        padding: 0.8rem 0;
+        font-size: 1.4rem;
+    } 
+
+    .sticky .dropdown ~ .link{
+        margin: 0.6rem 0;
+        padding: 0;
+    }
+
+    .sticky .dropdown{
+        margin: 0.6rem 0;
+        
+    }
+
+    
+    .sticky .link {
+        font-size: 1.6rem;
+    }
+    
+
+    
+}
+
+/***LEFT OFF***_______________________________________________________________________________________________________________________*/
+
+
+@media screen and (max-width: 530px) {
+
+    #menu-wrap {
+        margin-top: 2rem;
+    }
+    .sticky .menu-bar {
+        width: 95%;
+    }
+    
+    .sticky .link-container{ 
+        width: 95%;
+       
     }
 }
 
@@ -267,37 +533,35 @@ html {
     padding: 0.5rem;
     border-radius: 10px;
     margin-bottom: 6rem;
-    width: 50vw;  
+    width: 60vw;  
 }
 
 
-@media screen and (max-width: 1120px) {
-    .front-page-container{
-        width: 60vw;  
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .front-page-container{
-        width: 75vw;  
-    }
 
-}
-
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 860px) {
     .front-page-container{
         width: 85vw;  
     }
 
 }
 
-@media screen and (max-width: 380px) {
+
+
+@media screen and (max-width: 530px) {
     .front-page-container{
         width: 95vw;  
     }
 
 }
 
+
+@media screen and (max-width: 480px) {
+    .front-page-container{
+        margin-top: 1rem;  
+    }
+
+}
  
 /* INTRO BOX */
 .intro-container{
@@ -606,7 +870,7 @@ html {
 
 /* PAGE TEMPLATES */
 .shadow-box{
-    background: rgba(41, 39, 39, 0.7);
+    background: rgba(41, 39, 39);
     color: white;
     width: 60vw;
     text-shadow: 0 0 3px black;
@@ -619,30 +883,84 @@ html {
 .info-card{
     display: flow-root;
     line-height: 1.5;
+    margin-bottom: 5rem;
 }
 .info-card h2 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
     color: deepskyblue;
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
     font-weight: 700;
     text-shadow: 0 0 5px black;
+    border-bottom: 5px solid dodgerblue;
 }
 
 .info-card p {
     font-size: 1.6rem;
+    text-shadow: 0 0 3px black;
+    padding: 1rem 1.5rem;
 }
+/* .info-card p:hover {
+    font-size: 1.7rem;
+  
+} */
 
-.img-box{ 
+.logo-box{ 
+    
     float: right;
     width: 30rem;
-    height: 40rem;
-    background-color: crimson;
+    margin: 1rem;
+
+}
+
+.logo-box img{
+    width: 100%;
+    height: 20rem;
+
+}
+
+.img-box{
+    float: right;
+    width: 30rem;
+    margin: 1rem;
 }
 
 .img-box img{
     width: 100%;
-    height: 100%;
+    height: 35rem;
+}
+.content-box{
+  background: rgba(100, 98, 98, 0.5);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+    margin: 1.5rem 1.5rem 1.5rem 1rem;
+    width: 35rem;
+    border-radius: 20px;
+    overflow: hidden;
+  
     
 }
+
+.content-box h4{
+    font-size: 2rem;
+    background-color: dodgerblue;
+    margin-bottom: 0.5rem;
+    
+}
+
+.content-box a {
+   
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.content-box a:hover {
+    color: deepskyblue;
+}
+
+
