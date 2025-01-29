@@ -21,3 +21,5 @@ wrap mobile-btn-box & dropdown in a dive to flex column
 
 make 0 space between mobile link container and menu bar
 creat triangle point on it
+
+rename img-box
