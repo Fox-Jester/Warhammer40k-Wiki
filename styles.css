@@ -18,7 +18,11 @@ html {
 
 
 
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
 
 
 .page-container{
@@ -33,17 +37,18 @@ html {
 
 
 
+
 .home-img {
     background-image: url(images/emperor.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     
 }
 
 .iom-img {
     background-image: url(images/iom\ img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.space-marine-bg {
+    background-image: url(images/space.jpg);
 }
 
 /* MENU BAR */
@@ -51,7 +56,9 @@ html {
 #menu-wrap{
     margin-top: 5rem;
     margin-bottom: 1rem;
+    height: 9rem;
     width: 100%;
+    float: left;
     
     z-index: 3;
 }
@@ -72,10 +79,6 @@ html {
 }
 
 
-
-.hidden {
-    display: none;
-}
 
 
 .logo-container{
@@ -103,9 +106,11 @@ html {
 
 .link-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     margin-top: 2rem;
-    width: 53rem;
+    width: 100%;
+    
+    
     
 }
 
@@ -117,22 +122,27 @@ html {
     font-size: 2.2rem;
     text-decoration: none;
     font-weight: 500;
- 
+}
+
+.menu-bar .link ~ .chevron{
+    margin-right: 2rem;
 }
 
 .link:hover {
     color: deepskyblue;
     text-decoration: underline;
-
+    
 }
-
+.chevron{
+    transition: 0.3s;
+    
+}
 
 .link ~ .chevron, .mobile-btn-box .chevron {
     color: white;
     text-shadow: 0 0 5px black;
     margin-left: 0.4rem;
     font-size: 1.2rem;
-    transition: 0.3s;
 }
 
 .dropdown{
@@ -153,7 +163,7 @@ html {
     padding: 0.5rem;
     z-index: 1;
     position: absolute;
-     
+    
 }
 
 
@@ -178,9 +188,12 @@ html {
     transform: rotate(90deg);
 }
 
-.rotate {
-    transform: rotate(90deg);
+#menu-wrap.sticky {
+    
+    margin: 0;
+    
 }
+
 
 .mobile-btn-box {
     display: none;
@@ -188,15 +201,15 @@ html {
     padding-right: 1rem;
 }
 .mobile-btn {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgb(228, 223, 223);
     margin-right: 5px;  
 }
 
- .mobile-btn-box .chevron{
+.mobile-btn-box .chevron{
     position: absolute;
     bottom: 5px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .sticky .menu-bar {
@@ -210,14 +223,15 @@ html {
 }
 
 .sticky .menu-bar img{
-    width: 20rem;
+    width: 15rem;
 }
 
 .sticky .logo-tag{
-    font-size: 1.4rem;
-    left: 65px;
+    font-size: 1.2rem;
+    left: 47px;
     bottom: -2px;
 }
+
 
 .sticky .link-container{ 
     width: 60%;
@@ -228,7 +242,7 @@ html {
     background: rgb(42, 40, 40);
     position: absolute;
     padding: 1rem;
-    top: 6.4rem;
+    top: 4.9rem;
     z-index: 3;
     margin-top: 0.5rem;
 
@@ -264,7 +278,7 @@ html {
 .sticky .dropdown-content > .link{
     text-decoration: underline;
     padding: 1rem 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 } 
 .sticky .dropdown ~ .link{
     width: 100%;
@@ -287,27 +301,28 @@ html {
 
 .sticky .link {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.8rem;
    
 }
 
 .sticky .logo-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 .sticky .reveal-flex{
     display: flex;
 }
 
+.buff {
+    margin-top: 15rem;
+}
 
 
 @media screen and (max-width: 1500px){
     #menu-wrap {
-        margin-bottom: 0;
+        margin-bottom: 1.5rem;
+        height: 7.5rem;
     }
 
-    .menu-bar{
-        margin-bottom: 1.5rem;
-    }
     
     .menu-bar img{
         width: 20rem;
@@ -322,9 +337,7 @@ html {
     .link {
         font-size: 2rem;
     }
-    .link-container{
-        width: 45rem;
-    }
+   
     
     .link-container .chevron {
         font-size: 1.2rem;
@@ -334,14 +347,26 @@ html {
         font-size: 1.8rem;
     }
     
-    
+    .buff {
+        margin-top: 14rem;
+    }
 }
 
 
 @media screen and (max-width: 1200px){
     
+    #menu-wrap {
+        height: 6.5rem;
+    }
+
+    .buff {
+        margin-top: 13rem;
+    }
     
-    
+    .menu-bar {
+        width: 75%;
+    }
+
     .menu-bar img{
         width: 15rem;
     }
@@ -355,9 +380,7 @@ html {
     .link {
         font-size: 1.6rem;
     }
-    .link-container{
-        width: 40rem;
-    }
+   
     
     .link-container .chevron {
         font-size: 1rem;
@@ -383,7 +406,15 @@ html {
         font-size: 1.6rem;
     }
 
+    .sticky .menu-bar {
+        width: 75%;
+    }
     
+    .sticky .link-container{ 
+        width: 75%;
+
+        top: 4.8rem;
+    }
 
     .sticky .dropdown-content {
         margin-top: 6px;  
@@ -393,9 +424,6 @@ html {
         padding: 0.8rem 0;
         font-size: 1.6rem;
     } 
-
-  
-
     
     .sticky .link {
         font-size: 1.8rem;
@@ -406,6 +434,13 @@ html {
 
 @media screen and (max-width: 860px) {
     
+    #menu-wrap {
+        height: 8.5rem;
+    }
+
+    .buff {
+        margin-top: 15rem;
+    }
     
     .menu-bar img{
         width: 10rem;
@@ -420,12 +455,12 @@ html {
     
     
     .link-container{
-        width: 40rem;
+        justify-content: center;
     }
     
     .menu-bar {
         flex-direction: column;
-        margin-top: 3rem;
+
         
     }
     
@@ -447,14 +482,6 @@ html {
         margin-bottom: 1rem;
     }
     
-    .sticky .menu-bar img {
-        width: 15rem;
-    }
-    .sticky .logo-tag{
-        font-size: 1.2rem;
-        left: 47px;
-        bottom: -2px;
-    }
     .sticky .menu-bar {
         width: 85%;
     }
@@ -513,10 +540,6 @@ html {
 
 
 @media screen and (max-width: 530px) {
-
-    #menu-wrap {
-        margin-top: 2rem;
-    }
     .sticky .menu-bar {
         width: 95%;
     }
@@ -905,12 +928,12 @@ html {
     }
 }
 
-.info-card{
+.info-box{
     display: flow-root;
     line-height: 1.5;
     margin-bottom: 5rem;
 }
-.info-card h2 {
+.info-box h2 {
     font-size: 2.8rem;
     color: deepskyblue;
     text-align: center;
@@ -922,7 +945,7 @@ html {
     border-bottom: 5px solid dodgerblue;
 }
 
-.info-card p {
+.info-box p {
     font-size: 1.8rem;
     text-shadow: 0 0 5px black;
     padding: 1rem 1.5rem;
@@ -930,46 +953,46 @@ html {
 
 }
 @media screen and (max-width: 1200px){
-    .info-card{
+    .info-box{
         line-height: 1.2;
         margin-bottom: 4.5rem;
     }
-    .info-card h2 {
+    .info-box h2 {
         font-size: 2.4rem;
         margin-bottom: 1.8rem;
         margin-top: 0.5rem;
 
     }
     
-    .info-card p {
+    .info-box p {
         font-size: 1.6rem;
         padding: 1rem 1rem;
     }
 }
 
 @media screen and (max-width: 860px){
-    .info-card{
+    .info-box{
 
         margin-bottom: 4rem;
     }
-    .info-card h2 {
+    .info-box h2 {
         font-size: 2.2rem;
         margin-bottom: 1.5rem;
         margin-top: 0.5rem;
 
     }
     
-    .info-card p {
+    .info-box p {
         font-size: 1.6rem;
         padding: 0.8rem 0.8rem;
     }
 }
 
 @media screen and (max-width: 530px){
-    .info-card{
+    .info-box{
         margin-bottom: 3rem;
     }
-    .info-card h2 {
+    .info-box h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
         margin-top: 0.5rem;
@@ -994,7 +1017,7 @@ html {
 
 }
 
-.img-box{
+.info-card{
     text-align: center;
     background: rgba(31, 141, 252, 0.5);
     float: right;
@@ -1004,7 +1027,7 @@ html {
     padding: 1rem;
 }
 
-.img-box h3{
+.info-card h3{
     text-shadow: 0 0 3px black;
     font-weight: 600;
     color: white;
@@ -1013,9 +1036,17 @@ html {
 
 }
 
-.img-box img{
+.info-card img{
     width: 100%;
     height: 35rem;
+}
+
+.info-card.left{
+    float: left;
+}
+.info-card .chapter-img{
+    width: 100%;
+    height: 20rem;
 }
 
 @media screen and (max-width: 1200px){
@@ -1029,18 +1060,18 @@ html {
     
     }
 
-    .img-box{
+    .info-card{
         width: 25rem;
         margin: 1rem;
         padding: 0.5rem;
     }
 
-    .img-box h3{
+    .info-card h3{
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
     
     }
-    .img-box img{
+    .info-card img{
         height: 30rem;
     }
 }
@@ -1056,15 +1087,15 @@ html {
     
     }
 
-    .img-box{
+    .info-card{
         width: 20rem;
     }
 
-    .img-box h3{
+    .info-card h3{
         font-size: 1.6rem;
 
     }
-    .img-box img{
+    .info-card img{
 
         height: 25rem;
     }
@@ -1151,9 +1182,9 @@ html {
 
 .chapter-container{
     width: 70%;
-    float: left;
+    
     background: rgba(31, 141, 252, 0.5);
-    margin: 1rem 2rem 1rem 1rem;
+    margin: 1rem auto;
     text-align: center;
     font-size: 1.6rem;
     text-shadow: 0 0 5px black;
@@ -1167,6 +1198,7 @@ html {
 .chapter-grid{
     display: grid;
     grid-template-columns: repeat(4, auto);
+    transition: 0.3s;
     
 }
 
@@ -1176,14 +1208,21 @@ html {
 
 .grid-header {
     padding: 0.5rem;
+    cursor: pointer;
+    position: relative;
 }
 .grid-header h4{
+    margin-right: 3px;
     display: inline;
     font-size: 2rem;
 }
 
 .grid-header .chevron{
-    font-size: 1.4rem;
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+    font-size: 1.6rem;
+   
 }
 
 
@@ -1211,19 +1250,17 @@ html {
 @media screen and (max-width: 1200px){
     .chapter-container{
         width: 80%;
-        margin: 1rem;
-
     }
 
-    .grid-header {
-        padding: 0.5rem;
-    }
+
     .grid-header h4{
         font-size: 1.8rem;
     }
     
     .grid-header .chevron{
-        font-size: 1.2rem;
+        right: 15px;
+        bottom: 10px;
+        font-size: 1.6rem;
     }
     
 }
@@ -1231,9 +1268,6 @@ html {
 @media screen and (max-width: 860px){
     .chapter-container{
         width: 90%;
-        margin: auto;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
         float: none;
 
     }
@@ -1245,8 +1279,8 @@ html {
         font-size: 1.8rem;
     }
     
-    .grid-header .chevron{
-        font-size: 1.2rem;
+    .grid-header .chevron{     
+        font-size: 1.4rem;
     }
     
 
@@ -1254,7 +1288,14 @@ html {
 
 }
 
+/* ___Chapter Card____________________________*/
 
+.hidden {
+    display: none;
+}
+.rotate {
+    transform: rotate(90deg);
+}
 
 
 

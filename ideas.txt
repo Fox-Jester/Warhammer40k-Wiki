@@ -22,4 +22,9 @@ wrap mobile-btn-box & dropdown in a dive to flex column
 make 0 space between mobile link container and menu bar
 creat triangle point on it
 
-rename img-box
+rename img-box to make it reusable
+
+stcky menu bar icon and font to big
+
+make primarch link in info card to bottom of page.
+
