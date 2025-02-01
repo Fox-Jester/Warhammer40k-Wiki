@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xenos</title>
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e186fe6458.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="iom-img">
+    <div class="page-container">
+      <div class="buffer"></div>
+      <div id="menu-wrap">
+        <div class="menu-bar">
+          <div class="logo-container">
+            <img src="../images/w40k logo.webp" alt="" />
+            <h1 class="logo-tag">FAN PAGE</h1>
+          </div>
+
+          <div class="mobile-btn-box">
+            <i class="fa-solid fa-bars mobile-btn"></i>
+            <i class="fa-solid fa-chevron-right chevron"></i>
+          </div>
+
+          <div class="link-container">
+            <div class="dropdown">
+              <a class="link" href="">Imperium of Man</a>
+              <i class="fa-solid fa-chevron-right chevron"></i>
+
+              <div class="dropdown-content">
+                <a class="link" href="">Astra Militarum</a>
+                <a class="link" href="">Space Marines</a>
+                <a class="link" href="">Adeptus Mechanicus</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a class="link" href="">Chaos</a>
+              <i class="fa-solid fa-chevron-right chevron"></i>
+
+              <div class="dropdown-content">
+                <a class="link" href="">Chaos Gods</a>
+                <a class="link" href="">Chaos Space Marines</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a class="link" href="">Xeno</a>
+              <i class="fa-solid fa-chevron-right chevron"></i>
+
+              <div class="dropdown-content">
+                <a class="link" href="">Tyranids</a>
+                <a class="link" href="">Necrons</a>
+                <a class="link" href="">Orcs</a>
+              </div>
+            </div>
+
+            <a class="link" href="">Video Games</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="shadow-box">
+        <section class="info-box">
+          <h2>Xenos</h2>
+          <div class="logo-box">
+            <img src="../images/Iom logo.webp" alt="" />
+          </div>
+
+          <div class="content-box">
+            <h4>Contents</h4>
+            <a href="#Tyranids-header">Tyranids</a>
+            <a href="#Necrons-header">Necrons</a>
+            <a href="#Orks-header">Orks</a>
+          </div>
+        </section>
+        <section class="info-box">
+          <h2 id="Tyranids-header">Tyranids</h2>
+          <div class="info-card">
+            <h3>Tyranids</h3>
+            <img src="../images/astra_militarum.jpg" alt="" />
+          </div>
+        </section>
+        <section class="info-box">
+          <h2 id="Necrons-header">Necrons</h2>
+
+          <div class="info-card">
+            <h3>Necrons</h3>
+            <img src="../images/space_marine.jpg" alt="" />
+          </div>
+        </section>
+        <section class="info-box">
+          <h2 id="Orks-header">Orks</h2>
+          <div class="info-card">
+            <h3>Orks</h3>
+            <img src="../images/adeptus mechanicus.jpg" alt="" />
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="chapter-grid.js"></script>
+    <script src="../sticky-nav.js"></script>
+  </body>
+</html>

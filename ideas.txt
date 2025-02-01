@@ -28,3 +28,5 @@ stcky menu bar icon and font to big
 
 make primarch link in info card to bottom of page.
 
+
+fix nav bar drop down width and alignment.

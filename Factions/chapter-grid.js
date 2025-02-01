@@ -1,6 +1,6 @@
 
 
-const App = {
+const GridDropDown = {
     $: {
         gridHeader: document.querySelector(".grid-header"),
         chapterGrid: document.querySelector(".chapter-grid")
@@ -14,9 +14,9 @@ const App = {
     applyListeners(){
         this.$.gridHeader.addEventListener("click", (e) => {
             this.$.chapterGrid.classList.toggle("hidden");
-            App.$.gridHeader.lastElementChild.classList.toggle("rotate");
+            GridDropDown.$.gridHeader.lastElementChild.classList.toggle("rotate");
         })
     },
 }
 
-App.init()
+GridDropDown.init()
