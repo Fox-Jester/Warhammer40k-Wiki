@@ -38,17 +38,24 @@ body{
 
 
 
-.home-img {
-    background-image: url(images/emperor.jpg);
-    
+.home-bg {
+    background-image: url(images/bg/emperor.jpg);
 }
 
-.iom-img {
-    background-image: url(images/iom\ img2.jpg);
+.iom-bg {
+    background-image: url(images/bg/iom\ img2.jpg);
+}
+
+.chaos-bg {
+    background-image: url(images/bg/Warp.webp);
+}
+
+.xeno-bg {
+    background-image: url(images/bg/Xeno-bg.jpg);
 }
 
 .space-bg {
-    background-image: url(images/space.jpg);
+    background-image: url(images/bg/space.jpg);
 }
 
 /* MENU BAR */
@@ -64,7 +71,7 @@ body{
 }
 
 .sticky{
-    background: rgba(32, 155, 155, 0.7);
+    background: rgba(27, 139, 252, 0.8);
     position: sticky;
     top: 0;
 
@@ -168,7 +175,7 @@ body{
 
 
 .dropdown-content a {
-    padding: 1rem 1.2rem;
+    padding: 1rem 0.5rem;
     font-size: 1.6rem;
     text-wrap: nowrap;
     display: block;
@@ -1021,6 +1028,15 @@ body{
 
 }
 
+.logo-box.big{
+    width: 45rem;
+}
+
+.logo-box.big img {
+    
+    height: 30rem;
+}
+
 .logo-box img{
     width: 100%;
     height: 20rem;
@@ -1191,6 +1207,26 @@ body{
     }
 }
 
+@media screen and (max-width:750px){
+    .logo-box.big {
+        width: 35rem;
+    }
+    
+    .logo-box.big img {
+        
+        height: 20rem;
+    }
+}
+
+@media screen and (max-width:550px){
+    .logo-box.big {
+        float: none;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+   
+}
+
 @media screen and (max-width: 425px){
     .logo-box{ 
         width: 20rem;
@@ -1206,6 +1242,13 @@ body{
     .logo-box img{
         height: 10rem;
     
+    }
+
+    
+    
+    .logo-box.big img {
+        
+        height: 15rem;
     }
 
     .info-card{
@@ -1242,6 +1285,12 @@ body{
     .info-card.square img{
         height: 15rem;
     
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .logo-box.big {
+        width: 100%;
     }
 }
 
@@ -1293,7 +1342,7 @@ body{
     color: white;
     text-shadow: 0 0 3px black;
     font-size: 1.8rem;
-    padding: 1rem;
+    padding: 1.5rem 0;
     width: 100%;
 }
 
@@ -1318,7 +1367,7 @@ body{
       
       .content-dropdown a {
           font-size: 1.7rem;
-          margin: 0.8rem;
+          
       }
 }
 
@@ -1340,9 +1389,9 @@ body{
     }
       
       .content-dropdown a {
-
-          font-size: 1.6rem;
-          margin: 0.8rem;
+        padding: 1rem 0;
+        font-size: 1.6rem;
+          
       }
 }
 
