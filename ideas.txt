@@ -1,32 +1,13 @@
-factions - subfactions page
 
- chapters/specific entries - page
-
-
-
-make an adaptable content box for multi use
 
 ADD QUOTES
 
-create seperator
-
-ADD MULTI DROPDOWN for mobile
-
-screen size:
-
-480 switch to toggle drop down
-
-
-wrap mobile-btn-box & dropdown in a dive to flex column
-
-make 0 space between mobile link container and menu bar
-creat triangle point on it
-
-rename img-box to make it reusable
 
 stcky menu bar icon and font to big
 
-make primarch link in info card to bottom of page.
-
 
 fix nav bar drop down width and alignment.
+
+contentbox media quary
+
+maybe make a large verion of logo box for chaos gods
