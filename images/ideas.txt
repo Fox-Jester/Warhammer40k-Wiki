@@ -1,4 +1,9 @@
 
-change fgaction bg.
+
 
 make chapter box look better?
+
+
+key down event listener on input,
+will call function that will search through all game=names,
+and will call a whitespace remover function,
