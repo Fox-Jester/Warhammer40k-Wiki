@@ -11,7 +11,10 @@ const GameSorter = {
         filterGroups: document.querySelectorAll(".filter-group"),
 
         filterBtn: document.querySelector("#filter-btn"),
+        filterTags: document.querySelectorAll(".filter-tag"),
+
         searchBtn: document.querySelector("#search-btn"),
+        searchBar: document.querySelector("#search-bar"),
 
         positionArray: [],
     },
@@ -26,10 +29,59 @@ const GameSorter = {
         this.$.filterBtn.addEventListener("click", (e) => {
             this.wipe()
             this.filterToggle()
+            GameSorter.search()
+        })
+        this.$.searchBtn.addEventListener("click", (e) => {
+            GameSorter.search()
+        })
+        this.$.searchBar.addEventListener("keydown", (e) => {
+            if(e.key === "Enter"){
+                GameSorter.search()
+            }
+        })
+    },
+
+    search(){
+        const value = this.$.searchBar.value.replace(/\s/g, "").toLowerCase()
+        const regex = /\S/;
+
+        this.$.gameNames.forEach(name => {
+            const realName = name.innerHTML.toLowerCase()
+            const isVisible = realName.replace(/\s/g, "").includes(value)
+            name.parentElement.classList.toggle("hidden", !isVisible)
+        })
+        
+        this.hiddenGroupCheck();
+    },
+
+    hiddenGroupCheck(){
+        this.$.filterGroups.forEach(filGroup => {
+            let gameGroups = filGroup.querySelectorAll(".game-group");
+            const groupNum = gameGroups.length
+            let hidden = 0
+            gameGroups.forEach(group => {
+                
+                if(group.classList.contains("hidden")){
+                    hidden++
+                }
+            })
+            
+            if(hidden === groupNum){
+                filGroup.classList.add("hidden")
+            }
+            else{
+                filGroup.classList.remove("hidden")
+            }
+
         })
     },
 
     filterToggle(){
+
+        this.$.filterTags.forEach(tag => {
+            tag.classList.toggle("hidden")
+        })
+
         if(GameSorter.$.filterBtn.classList.contains("letter")){
             GameSorter.$.filterBtn.classList.remove("letter");
             GameSorter.$.filterBtn.classList.add("number");
@@ -40,6 +92,8 @@ const GameSorter = {
             GameSorter.$.filterBtn.classList.add("letter");
             this.letterFilter()
         }
+
+        
     },
 
     wipe(){
