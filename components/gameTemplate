@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| Warhammer40k wiki</title>
+
+    <link rel="stylesheet" href="../../styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e186fe6458.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="space-bg">
+    <div class="page-container">
+      <div class="buffer"></div>
+      <div id="menu-wrap">
+        <div class="menu-bar">
+          <div class="logo-container">
+            <a href="../../index.html">
+              <img src="../../images/w40k logo.webp" alt="" />
+              <h1 class="logo-tag">FAN PAGE</h1>
+            </a>
+          </div>
+
+          <div class="mobile-btn-box">
+            <i class="fa-solid fa-bars mobile-btn"></i>
+            <i class="fa-solid fa-chevron-right chevron"></i>
+          </div>
+
+          <div class="link-container">
+            <div class="dropdown">
+              <a class="link" href="../../Factions/Imperium_of_Man.html"
+                >Imperium of Man</a
+              >
+              <i class="fa-solid fa-chevron-right chevron"></i>
+
+              <div class="dropdown-content">
+                <a
+                  class="link"
+                  href="../../Factions/Imperium_of_Man.html#astra-militarum-header"
+                  >Astra Militarum</a
+                >
+                <a
+                  class="link"
+                  href="../../Factions/Imperium_of_Man.html#space-marine-header"
+                  >Space Marines</a
+                >
+                <a
+                  class="link"
+                  href="../../Factions/Imperium_of_Man.html#adeptus-mechanicus-header"
+                  >Adeptus Mechanicus</a
+                >
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a class="link" href="../../Factions/Chaos.html">Chaos</a>
+              <i class="fa-solid fa-chevron-right chevron"></i>
+
+              <div class="dropdown-content">
+                <a
+                  class="link"
+                  href="../../Factions/Chaos.html#Chaos-Gods-header"
+                  >Chaos Gods</a
+                >
+                <a
+                  class="link"
+                  href="../../Factions/Chaos.html#Chaos-SpaceMarines-header"
+                  >Chaos Space Marines</a
+                >
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a class="link" href="../../Factions/Xenos.html">Xeno</a>
+              <i class="fa-solid fa-chevron-right chevron"></i>
+
+              <div class="dropdown-content">
+                <a class="link" href="../../Factions/Xenos.html#Tyranids-header"
+                  >Tyranids</a
+                >
+                <a class="link" href="../../Factions/Xenos.html#Necrons-header"
+                  >Necrons</a
+                >
+                <a class="link" href="../../Factions/Xenos.html#Orks-header"
+                  >Orks</a
+                >
+              </div>
+            </div>
+
+            <a class="link" href="../Game_selector.html">Video Games</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="shadow-box">
+        <section class="info-box">
+          <h2>GAMENAME</h2>
+          <div class="info-card square">
+            <h3>GAMENAME</h3>
+            <img
+              class="chapter-img"
+              src="../../images/covers/Battlefleet_Gothic Armada cover.jpg"
+              alt=""
+            />
+            <div class="info-grid">
+              <div><p>Developer(s)</p></div>
+              <div><p></p></div>
+              <div><p>Publisher(s)</p></div>
+              <div><p></p></div>
+              <div><p>Platform(s)</p></div>
+              <div><p></p></div>
+              <div><p>Genre(s)</p></div>
+              <div><p></p></div>
+              <div><p>Released</p></div>
+              <div><p></p></div>
+            </div>
+          </div>
+          <p>*SYNAPSIS*</p>
+          <section class="info-box contained">
+            <h2>Gameplay</h2>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="../../sticky-nav.js"></script>
+  </body>
+</html>

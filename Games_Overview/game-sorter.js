@@ -13,6 +13,7 @@ const GameSorter = {
         filterBtn: document.querySelector("#filter-btn"),
         filterTags: document.querySelectorAll(".filter-tag"),
 
+        inputGroup: document.querySelector(".input-group"),
         searchBtn: document.querySelector("#search-btn"),
         searchBar: document.querySelector("#search-bar"),
 
@@ -39,14 +40,40 @@ const GameSorter = {
                 GameSorter.search()
             }
         })
+
+        this.$.searchBar.addEventListener("input", (e) => {
+            const value = e.target.value
+            if((value === "") && (document.querySelector(".refresh-btn"))){
+                const refreshBtn = document.querySelector(".refresh-btn");
+                refreshBtn.remove()
+                this.search();
+            }
+        })
     },
 
     search(){
         const value = this.$.searchBar.value.replace(/\s/g, "").toLowerCase()
         const regex = /\S/;
 
+
+        if((regex.test(value)) && (GameSorter.$.inputGroup.childElementCount < 3)) {
+                  
+            const refreshBtn = document.createElement("i")
+            refreshBtn.classList.add("fa-solid", "fa-x", "refresh-btn")
+            GameSorter.$.searchBar.after(refreshBtn);
+
+            refreshBtn.addEventListener("click", (e) => {
+                GameSorter.$.searchBar.value = ""
+                refreshBtn.remove();
+                GameSorter.$.searchBar.focus();
+                GameSorter.search()
+            })
+        
+    }
+
         this.$.gameNames.forEach(name => {
             const realName = name.innerHTML.toLowerCase()
+            
             const isVisible = realName.replace(/\s/g, "").includes(value)
             name.parentElement.classList.toggle("hidden", !isVisible)
         })
@@ -141,7 +168,9 @@ const GameSorter = {
     },
 
     datify(subDate){
-        if(subDate === "tba"){
+        if(subDate === "TBA"){
+            
+            
             this.tbaChecker(subDate);
         }
         else{
@@ -220,6 +249,7 @@ const GameSorter = {
             
         })
         
+        
         if(counter === 0){
             
             const filterGroup = document.createElement("div");
@@ -269,7 +299,7 @@ const GameSorter = {
         this.$.gameGroups.forEach(gamegroup => {
             let name = gamegroup.lastElementChild
             let date = name.classList.value.substring(10);
-            if(date === 'tba'){
+            if(date === 'TBA'){
                 const filterNumbers = document.querySelectorAll(".filter-number")
                 filterNumbers.forEach(filterNum => {
                     if(filterNum.innerHTML === date){

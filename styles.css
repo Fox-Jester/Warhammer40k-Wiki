@@ -135,6 +135,10 @@ body{
     margin-right: 2rem;
 }
 
+.sticky .link ~ .chevron{
+    margin-right: 0;
+}
+
 .link:hover {
     color: deepskyblue;
     text-decoration: underline;
@@ -228,6 +232,7 @@ body{
     z-index: 3;
    
 }
+
 
 .sticky .menu-bar img{
     width: 15rem;
@@ -451,6 +456,12 @@ body{
     
     .menu-bar img{
         width: 10rem;
+        
+        
+        
+    }
+    .menu-bar {
+        width: 90%;
     }
     
     .logo-tag{
@@ -939,11 +950,25 @@ body{
     display: flow-root;
     line-height: 1.5;
     margin-bottom: 5rem;
+    word-spacing: 1px;
 }
+
+.info-box.contained{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    display: block;
+}
+
+.info-box.contained h2{
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
 .info-box h2 {
+    
+    text-align: center;
     font-size: 2.8rem;
     color: deepskyblue;
-    text-align: center;
     padding-bottom: 0.2rem;
     margin-bottom: 2rem;
     margin-top: 0.5rem;
@@ -999,6 +1024,7 @@ body{
     .info-box{
         margin-bottom: 3rem;
     }
+   
     .info-box h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
@@ -1138,6 +1164,8 @@ body{
         padding: 0.5rem;
       
     }
+
+   
 
     .info-card .rectangle-img{
       
@@ -1528,6 +1556,22 @@ body{
     margin: 1rem 0 3rem;
 }
 
+@media screen and (max-width: 1160px){
+    .game-selector-container {
+        
+        width: 90%;
+       
+    }
+}
+
+@media screen and (max-width: 520px){
+    .game-selector-container {
+        
+        width: 95%;
+       
+    }
+}
+
 .filter-container {
     display: flex;
     align-items: center;
@@ -1578,6 +1622,7 @@ body{
 
 
 #filter-btn {
+    
     opacity: 0;
     left: -9000px;
     
@@ -1616,19 +1661,34 @@ body{
 #filter-btn:checked + label::after{
     transform: translateX(100%);
 
-  
 }
 
+.toggle-container {
+    display: flex;
+}
 
+@media screen and (max-width: 410px){
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        
+    }
+
+    .toggle-container {
+        display: flex;
+        margin-top: 1.5rem;
+    }
+}
 
 
 .game-container {
     display: grid;
     
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 49%);
     width: 95%;
     padding: 2rem 1rem;
-    gap: 4rem;
+    gap: 2rem 2%;
     border: 2px solid lightgrey;
     box-shadow: 0 0 3px black;
     border-radius: 20px;
@@ -1678,6 +1738,126 @@ body{
     height: 100%;
     width: 12rem;
 }
+
+@media screen and (max-width: 1160px){
+
+   
+
+   
+
+    .game-name{
+        font-size: 1.6rem;
+       
+    }
+    
+}
+
+@media screen and (max-width: 900px){
+
+    .game-container h4{
+        font-size: 2.2rem;
+        margin: 1rem 1rem 0 1rem;
+    }
+
+    .game-name{
+        font-size: 1.4rem;
+       
+    }
+
+    .game-group img{
+        width: 10rem;
+    }
+    
+}
+
+@media screen and (max-width: 770px){
+
+
+    .game-group img{
+        width: 8rem;
+    }
+
+    .game-name{
+        font-size: 1.2rem;
+       
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+
+    .game-container {
+        display: grid;
+        
+        grid-template-columns: repeat(1, 100%);
+        width: 100%;
+        padding: 2rem 1rem;
+        gap: 2rem;
+
+    }
+
+    .game-name{
+        font-size: 1.6rem;
+       
+    }
+
+    .game-container h4{
+        font-size: 2.2rem;
+        margin: 1rem 1rem 0 0rem;
+    }
+
+    .game-group img{
+        width: 12rem;
+    }
+    
+}
+
+@media screen and (max-width: 470px){
+
+    .game-name{
+        font-size: 1.4rem;
+       
+    }
+
+    .game-group {
+        height: 5rem;
+
+    }
+
+    .game-container h4{
+        font-size: 1.8rem;
+
+    }
+
+    .game-group img{
+        width: 8rem;
+    }
+    
+}
+
+@media screen and (max-width: 380px){
+
+    .game-name{
+        font-size: 1.2rem;
+       
+    }
+
+
+
+    .game-container h4{
+        font-size: 1.6rem;
+
+    }
+
+    .game-group img{
+        width: 8rem;
+    }
+    
+}
+
+
+
+
 
 
 

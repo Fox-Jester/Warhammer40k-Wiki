@@ -15,48 +15,62 @@
 
     <div class="link-container">
       <div class="dropdown">
-        <a class="link" href="../Imperium_of_Man.html">Imperium of Man</a>
+        <a class="link" href="../../Factions/Imperium_of_Man.html"
+          >Imperium of Man</a
+        >
         <i class="fa-solid fa-chevron-right chevron"></i>
 
         <div class="dropdown-content">
-          <a class="link" href="../Imperium_of_Man.html#astra-militarum-header"
+          <a
+            class="link"
+            href="../../Factions/Imperium_of_Man.html#astra-militarum-header"
             >Astra Militarum</a
           >
-          <a class="link" href="../Imperium_of_Man.html#space-marine-header"
+          <a
+            class="link"
+            href="../../Factions/Imperium_of_Man.html#space-marine-header"
             >Space Marines</a
           >
           <a
             class="link"
-            href="../Imperium_of_Man.html#adeptus-mechanicus-header"
+            href="../../Factions/Imperium_of_Man.html#adeptus-mechanicus-header"
             >Adeptus Mechanicus</a
           >
         </div>
       </div>
 
       <div class="dropdown">
-        <a class="link" href="../Chaos.html">Chaos</a>
+        <a class="link" href="../../Factions/Chaos.html">Chaos</a>
         <i class="fa-solid fa-chevron-right chevron"></i>
 
         <div class="dropdown-content">
-          <a class="link" href="../Chaos.html#Chaos-Gods-header">Chaos Gods</a>
-          <a class="link" href="../Chaos.html#Chaos-SpaceMarines-header"
+          <a class="link" href="../../Factions/Chaos.html#Chaos-Gods-header"
+            >Chaos Gods</a
+          >
+          <a
+            class="link"
+            href="../../Factions/Chaos.html#Chaos-SpaceMarines-header"
             >Chaos Space Marines</a
           >
         </div>
       </div>
 
       <div class="dropdown">
-        <a class="link" href="../Xenos.html">Xeno</a>
+        <a class="link" href="../../Factions/Xenos.html">Xeno</a>
         <i class="fa-solid fa-chevron-right chevron"></i>
 
         <div class="dropdown-content">
-          <a class="link" href="../Xenos.html#Tyranids-header">Tyranids</a>
-          <a class="link" href="../Xenos.html#Necrons-header">Necrons</a>
-          <a class="link" href="../Xenos.html#Orks-header">Orks</a>
+          <a class="link" href="../../Factions/Xenos.html#Tyranids-header"
+            >Tyranids</a
+          >
+          <a class="link" href="../../Factions/Xenos.html#Necrons-header"
+            >Necrons</a
+          >
+          <a class="link" href="../../Factions/Xenos.html#Orks-header">Orks</a>
         </div>
       </div>
 
-      <a class="link" href="">Video Games</a>
+      <a class="link" href="../Game_selector.html">Video Games</a>
     </div>
   </div>
 </div>
