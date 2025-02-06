@@ -100,11 +100,7 @@
           <h2>GAMENAME</h2>
           <div class="info-card square">
             <h3>GAMENAME</h3>
-            <img
-              class="chapter-img"
-              src="../../images/covers/Battlefleet_Gothic Armada cover.jpg"
-              alt=""
-            />
+            <img class="rectangle-img" src="../../images/covers/" alt="" />
             <div class="info-grid">
               <div><p>Developer(s)</p></div>
               <div><p></p></div>
