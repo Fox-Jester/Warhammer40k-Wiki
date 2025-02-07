@@ -1667,7 +1667,7 @@ body{
     display: flex;
 }
 
-@media screen and (max-width: 410px){
+@media screen and (max-width: 420px){
     .filter-container {
         display: flex;
         flex-direction: column;
